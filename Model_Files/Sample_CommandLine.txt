@@ -1,0 +1,3 @@
+# sample command line specification to run the model. Specified directories need to be 
+#   customized to the local system.
+python C:\\Repositories\\kfint_watbudg_lstm\\KF_mHSP2\\standaloneMain.py C:\\Repositories\\kfint_watbudg_lstm\\Model_Files -f InitPBased_rpNR_15.h5 
