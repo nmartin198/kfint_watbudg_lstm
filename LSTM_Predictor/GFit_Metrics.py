@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ Standard numpy array 'goodness-of-fit' metrics
 
 These are developed using primarily numpy objects and methods
@@ -11,6 +12,29 @@ These are developed using primarily numpy objects and methods
 * vcalc_kge_beta: Calculates KGE, Beta subcomponent for each output
 * vcalc_kge_r: Calculates KGE, r subcomponent for each output
 * vcalc_kge: Calculates KGE for each output
+
+"""
+# Copyright and License
+"""
+Copyright 2022 Southwest Research Institute
+
+Module Author: Nick Martin <nick.martin@alumni.stanford.edu>
+
+This file, ealstm_cells.py, is a collection of custom Keras extension
+methods.
+
+ealstm_cells.py is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+ealstm_cells.py is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with ealstm_cells.py.  If not, see <https://www.gnu.org/licenses/>.
 
 """
 import numpy as np

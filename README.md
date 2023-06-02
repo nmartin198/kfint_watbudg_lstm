@@ -1,4 +1,5 @@
-# kfint_watbudg_lstm
+# Dynamic Assimilation of Deep Learning Predictions to a Process-Based Water Budget
+
 Kalman filter integration of an LSTM predictor to a process-based water budget. This is a custom, 
 proof-of-concept integration. A Kalman filter algorithm integrates a process-based water budget 
 calculation with a deep learning predictor. The process-based water budget model is the "forward
@@ -11,7 +12,7 @@ algorithm.
 The purpose of this GitHub is to provide the archive of model files and source code for the 
 associated journal article.  
 
-* Citation here  
+* TBD - Citation here  
 
 
 ## Process-based Water Budget Model
@@ -39,6 +40,8 @@ an issues was uncovered with regular HSPF for representation of time-dependent o
 RCHRES. **mHSP2** was then used in this Kalman filter integration because the source code was
 available and could be modified to include the Kalman filter update.  
 
+[**mHSP2 Source Code**](https://github.com/nmartin198/mHSP2)
+
 [**Additional details on mHSP2**](https://nmartin198.github.io/pyHS2MF6/mHSP2.html)
 
 [**Modified mHSP2 forward model, InitPBased_rpNR.h5**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/Model_Files/Original)
@@ -53,43 +56,18 @@ An EA-LSTM predictor for aquifer segment water level elevation was created and t
 
 ## Kalman Filter Integration Source Code
 
+The integration code is a modified version of **mHSP2**. Modifications to **mHSP2** are minor and consist of insertion of calls to functions and routines in the file KF_UCUWCD_Custom.py. This module contains the Kalman filter calculations are routines for outputting and tracking important Kalman filter implementation parameters.
 
-**mHSP2** is the HSPF variant used in the [**pyHS2MF6**](https://nmartin198.github.io/pyHS2MF6/)
-integrated hydrologic model. It has been separated out from **pyHS2MF6** 
-to facilitate standalone use of this program.
+[**Kalman Filter Integration Source Code**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/KF_mHSP2)
 
-**mHSP2** is a port of [HSPsquared](https://github.com/respec/HSPsquared) created 
-specifically for coupled simulation with MODFLOW 6.
-[HSPsquared](https://github.com/respec/HSPsquared) is an HSPF variant 
-that was rewritten in pure Python. **mHSP2** only provides the water 
-movement and storage capabilities of [HSPsquared](https://github.com/respec/HSPsquared).
-
-The main difference between **mHSP2** and [HSPsquared](https://github.com/respec/HSPsquared) 
-is that **mHSP2** was created with the simulation time loop as 
-the main simulation loop to facilitate dynamic coupling to MODFLOW 6. 
-HSPF-variants traditionally use an operating module instance loop that 
-is executed in routing order as the main simulation loop. This approach 
-requires that the time simulation loop be executed for each operating 
-module instance.
-
-[**Additional details**](https://nmartin198.github.io/pyHS2MF6/mHSP2.html)
+[**KF_UCUWCD_Custom.py**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/KF_mHSP2/KF_UCUWCD_Custom.py)
 
 
-## Getting Started
+## Model Files
 
-The Python source code for **mHSP2** is in the [*src*](https://github.com/nmartin198/mHSP2/tree/main/src) 
-directory. The best way to start is to go through the 
-[HSPF Standalone Example Model](https://nmartin198.github.io/pyHS2MF6/cs_sa_HSPF.html) 
-in the **pyHS2MF6** documentation and run that model and verify that obtain 
-similar results.
+All model input files and example output files are available in the **Model Files** subdirectory.
 
-The next step would be to use the [example model](https://github.com/nmartin198/mHSP2/tree/main/example_input) 
-included in this repository as a second example case.
-
-There is also a utility [Jupyter Notebook](https://github.com/nmartin198/mHSP2/tree/main/jupyter_notebooks/Conv_pyHSPF_HSP2.ipynb) 
-included in this repository that provides an example of going 
-from the traditional HSPF inputs of UCI and WDM files to the HDF5 
-input file used by **mHSP2**.
+[**Model Files**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/Model_Files)
 
 
 ## Author
