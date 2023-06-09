@@ -6,14 +6,21 @@ calculation with a deep learning predictor. The process-based water budget model
 model." The deep learning predictor is a trained LSTM network model that predicts water levels
 in aquifer segments; LSTM predicted water levels are used as "measurements" by the Kalman filter
 algorithm.  
+<br/>
+<figure>
+    <img src="/assets/GA_KF-DA.png"
+         width="600"
+         alt="Graphical Abstract">
+</figure>
+<br/>
 
 ## Journal Article
 
 The purpose of this GitHub is to provide the archive of model files and source code for the 
-associated journal article.  
+associated [journal article](https://doi.org/10.3390/hydrology10060129).  
 
-* TBD - Citation here  
-
+* Martin, N. 2023. Dynamic Assimilation of Deep Learning Predictions to a Process-Based Water Budget. Hydrology, 10, 129.
+<br/>
 
 ## Process-based Water Budget Model
 
@@ -45,14 +52,14 @@ available and could be modified to include the Kalman filter update.
 [**Additional details on mHSP2**](https://nmartin198.github.io/pyHS2MF6/mHSP2.html)
 
 [**Modified mHSP2 forward model, InitPBased_rpNR.h5**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/Model_Files/Original)
-
+<br/>
 
 ## LSTM Predictor
 
 An EA-LSTM predictor for aquifer segment water level elevation was created and trained. This predictor provides water level "measurements" when equipment is malfunctioning or otherwise unavailable.
 
 [**Trained, complex graph LSTM predictor**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/LSTM_Predictor)
-
+<br/>
 
 ## Kalman Filter Integration Source Code
 
@@ -61,19 +68,21 @@ The integration code is a modified version of **mHSP2**. Modifications to **mHSP
 [**Kalman Filter Integration Source Code**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/KF_mHSP2)
 
 [**KF_UCUWCD_Custom.py**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/KF_mHSP2/KF_UCUWCD_Custom.py)
-
+<br/>
 
 ## Model Files
 
 All model input files and example output files are available in the **Model Files** subdirectory.
 
 [**Model Files**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/Model_Files)
-
+<br/>
 
 ## Author
 
 * **Nick Martin** nmartin@swri.org
+<br/>
 
 ## License
 
 This project is licensed under the GNU Affero General Public License v.3.0 - see the [LICENSE](LICENSE) file for details.
+<br/>
