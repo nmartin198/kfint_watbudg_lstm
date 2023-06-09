@@ -9,10 +9,9 @@ algorithm.
 <br/>
 <figure>
     <img src="/assets/GA_KF-DA.png"
-         width="600"
+         width="800"
          alt="Graphical Abstract">
 </figure>
-<br/>
 
 ## Journal Article
 
@@ -52,14 +51,16 @@ available and could be modified to include the Kalman filter update.
 [**Additional details on mHSP2**](https://nmartin198.github.io/pyHS2MF6/mHSP2.html)
 
 [**Modified mHSP2 forward model, InitPBased_rpNR.h5**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/Model_Files/Original)
-<br/>
+
+<br/><br/>
 
 ## LSTM Predictor
 
 An EA-LSTM predictor for aquifer segment water level elevation was created and trained. This predictor provides water level "measurements" when equipment is malfunctioning or otherwise unavailable.
 
 [**Trained, complex graph LSTM predictor**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/LSTM_Predictor)
-<br/>
+
+<br/><br/>
 
 ## Kalman Filter Integration Source Code
 
@@ -68,14 +69,16 @@ The integration code is a modified version of **mHSP2**. Modifications to **mHSP
 [**Kalman Filter Integration Source Code**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/KF_mHSP2)
 
 [**KF_UCUWCD_Custom.py**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/KF_mHSP2/KF_UCUWCD_Custom.py)
-<br/>
+
+<br/><br/>
 
 ## Model Files
 
 All model input files and example output files are available in the **Model Files** subdirectory.
 
 [**Model Files**](https://github.com/nmartin198/kfint_watbudg_lstm/tree/main/Model_Files)
-<br/>
+
+<br/><br/>
 
 ## Author
 
