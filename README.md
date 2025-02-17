@@ -82,7 +82,7 @@ All model input files and example output files are available in the **Model File
 
 ## Author
 
-* **Nick Martin** nmartin@swri.org
+* **Nick Martin** nick.martin@alumni.stanford.edu
 <br/>
 
 ## License
